@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F987566DDB327969B912634 /* Pods_telegram_telegramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78166BEDDE0813F396B3C54C /* Pods_telegram_telegramUITests.framework */; };
+		83C60F76855304D44E61EC7E /* Pods_telegram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FA3CB0DB6937F1CABB8C87 /* Pods_telegram.framework */; };
+		AC9FFB6A0D53B7E6EB782A37 /* Pods_telegramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332C155421CE110A9FDC087E /* Pods_telegramTests.framework */; };
+		CE300EBA2686129600A79FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EB92686129600A79FEC /* AppDelegate.swift */; };
+		CE300EBC2686129600A79FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EBB2686129600A79FEC /* SceneDelegate.swift */; };
+		CE300EBE2686129600A79FEC /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EBD2686129600A79FEC /* ChatController.swift */; };
+		CE300EC12686129600A79FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE300EBF2686129600A79FEC /* Main.storyboard */; };
+		CE300EC32686129A00A79FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE300EC22686129A00A79FEC /* Assets.xcassets */; };
+		CE300EC62686129A00A79FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */; };
+		CE300ED12686129B00A79FEC /* telegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300ED02686129B00A79FEC /* telegramTests.swift */; };
+		CE300EDC2686129B00A79FEC /* telegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EDB2686129B00A79FEC /* telegramUITests.swift */; };
+		CE300EEB2686140B00A79FEC /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EEA2686140B00A79FEC /* ChatViewModel.swift */; };
+		CE300EED2686163700A79FEC /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EEC2686163700A79FEC /* ChatModel.swift */; };
+		CE300EF326861C4300A79FEC /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EF226861C4300A79FEC /* BaseCell.swift */; };
+		CE300EF526861C7000A79FEC /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EF426861C7000A79FEC /* ChatCell.swift */; };
+		CE300EF82686231400A79FEC /* DialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EF72686231400A79FEC /* DialogController.swift */; };
+		CE300EFA2686235300A79FEC /* DialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EF92686235300A79FEC /* DialogViewModel.swift */; };
+		CE300EFD26862A8400A79FEC /* SplashViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EFC26862A8400A79FEC /* SplashViewCotroller.swift */; };
+		CE300F06268A3C9A00A79FEC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F05268A3C9A00A79FEC /* LoginController.swift */; };
+		CE300F08268A3CB300A79FEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F07268A3CB300A79FEC /* LoginViewModel.swift */; };
+		CE300F0A268A3CC800A79FEC /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F09268A3CC800A79FEC /* RegisterController.swift */; };
+		CE300F0C268A3CE900A79FEC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F0B268A3CE900A79FEC /* RegisterViewModel.swift */; };
+		CE300F0E268B344700A79FEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE300F0D268B344700A79FEC /* GoogleService-Info.plist */; };
+		CE300F11268B635F00A79FEC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F10268B635F00A79FEC /* BaseViewModel.swift */; };
+		CE300F14268B637700A79FEC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F13268B637700A79FEC /* Repository.swift */; };
+		CE300F18268B661000A79FEC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F17268B661000A79FEC /* ApiClient.swift */; };
+		CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F19268B68DC00A79FEC /* Constraints.swift */; };
+		CE300F1C268B698200A79FEC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F1B268B698200A79FEC /* SplashViewModel.swift */; };
+		CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76E7CA268C868D0013FA20 /* LoginModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE300ECD2686129B00A79FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE300EAE2686129500A79FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE300EB52686129500A79FEC;
+			remoteInfo = telegram;
+		};
+		CE300ED82686129B00A79FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE300EAE2686129500A79FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE300EB52686129500A79FEC;
+			remoteInfo = telegram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2403291962BCB1278FDE19DF /* Pods-telegram-telegramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegram-telegramUITests.release.xcconfig"; path = "Target Support Files/Pods-telegram-telegramUITests/Pods-telegram-telegramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		31BE45AD4A07206E88D6C266 /* Pods-telegramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegramTests.release.xcconfig"; path = "Target Support Files/Pods-telegramTests/Pods-telegramTests.release.xcconfig"; sourceTree = "<group>"; };
+		332C155421CE110A9FDC087E /* Pods_telegramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_telegramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78166BEDDE0813F396B3C54C /* Pods_telegram_telegramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_telegram_telegramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7892B960F16155C8BF77F1FD /* Pods-telegram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegram.debug.xcconfig"; path = "Target Support Files/Pods-telegram/Pods-telegram.debug.xcconfig"; sourceTree = "<group>"; };
+		80E0BC9FDA3A841DB2C3A736 /* Pods-telegram-telegramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegram-telegramUITests.debug.xcconfig"; path = "Target Support Files/Pods-telegram-telegramUITests/Pods-telegram-telegramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		97DCAEBA75E0A9006F7C4B06 /* Pods-telegram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegram.release.xcconfig"; path = "Target Support Files/Pods-telegram/Pods-telegram.release.xcconfig"; sourceTree = "<group>"; };
+		AE26B83B0A002AEDE7528382 /* Pods-telegramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-telegramTests.debug.xcconfig"; path = "Target Support Files/Pods-telegramTests/Pods-telegramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1FA3CB0DB6937F1CABB8C87 /* Pods_telegram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_telegram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE300EB62686129600A79FEC /* telegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = telegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE300EB92686129600A79FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE300EBB2686129600A79FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE300EBD2686129600A79FEC /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		CE300EC02686129600A79FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE300EC22686129A00A79FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE300EC52686129A00A79FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE300EC72686129A00A79FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE300ECC2686129B00A79FEC /* telegramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = telegramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE300ED02686129B00A79FEC /* telegramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = telegramTests.swift; sourceTree = "<group>"; };
+		CE300ED22686129B00A79FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE300ED72686129B00A79FEC /* telegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = telegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE300EDB2686129B00A79FEC /* telegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = telegramUITests.swift; sourceTree = "<group>"; };
+		CE300EDD2686129B00A79FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE300EEA2686140B00A79FEC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CE300EEC2686163700A79FEC /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		CE300EF226861C4300A79FEC /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		CE300EF426861C7000A79FEC /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		CE300EF72686231400A79FEC /* DialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogController.swift; sourceTree = "<group>"; };
+		CE300EF92686235300A79FEC /* DialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
+		CE300EFC26862A8400A79FEC /* SplashViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewCotroller.swift; sourceTree = "<group>"; };
+		CE300F05268A3C9A00A79FEC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CE300F07268A3CB300A79FEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CE300F09268A3CC800A79FEC /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		CE300F0B268A3CE900A79FEC /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		CE300F0D268B344700A79FEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE300F10268B635F00A79FEC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		CE300F13268B637700A79FEC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CE300F17268B661000A79FEC /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CE300F19268B68DC00A79FEC /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		CE300F1B268B698200A79FEC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		CE76E7CA268C868D0013FA20 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE300EB32686129500A79FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83C60F76855304D44E61EC7E /* Pods_telegram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300EC92686129B00A79FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9FFB6A0D53B7E6EB782A37 /* Pods_telegramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300ED42686129B00A79FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F987566DDB327969B912634 /* Pods_telegram_telegramUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D7EABBB5CB67F9087DC51AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1FA3CB0DB6937F1CABB8C87 /* Pods_telegram.framework */,
+				78166BEDDE0813F396B3C54C /* Pods_telegram_telegramUITests.framework */,
+				332C155421CE110A9FDC087E /* Pods_telegramTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C89990EF77CA8214BDE2A7E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7892B960F16155C8BF77F1FD /* Pods-telegram.debug.xcconfig */,
+				97DCAEBA75E0A9006F7C4B06 /* Pods-telegram.release.xcconfig */,
+				80E0BC9FDA3A841DB2C3A736 /* Pods-telegram-telegramUITests.debug.xcconfig */,
+				2403291962BCB1278FDE19DF /* Pods-telegram-telegramUITests.release.xcconfig */,
+				AE26B83B0A002AEDE7528382 /* Pods-telegramTests.debug.xcconfig */,
+				31BE45AD4A07206E88D6C266 /* Pods-telegramTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE300EAD2686129500A79FEC = {
+			isa = PBXGroup;
+			children = (
+				CE300EB82686129600A79FEC /* telegram */,
+				CE300ECF2686129B00A79FEC /* telegramTests */,
+				CE300EDA2686129B00A79FEC /* telegramUITests */,
+				CE300EB72686129600A79FEC /* Products */,
+				C89990EF77CA8214BDE2A7E9 /* Pods */,
+				2D7EABBB5CB67F9087DC51AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE300EB72686129600A79FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EB62686129600A79FEC /* telegram.app */,
+				CE300ECC2686129B00A79FEC /* telegramTests.xctest */,
+				CE300ED72686129B00A79FEC /* telegramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE300EB82686129600A79FEC /* telegram */ = {
+			isa = PBXGroup;
+			children = (
+				CE300F12268B636600A79FEC /* di */,
+				CE300F0F268B634A00A79FEC /* base  */,
+				CE300EF126861C2600A79FEC /* utils */,
+				CE300EF02686189000A79FEC /* chat */,
+				CE300EF6268622E100A79FEC /* dialog */,
+				CE300EFB26862A6900A79FEC /* splash */,
+				CE300EFF268A2A3C00A79FEC /* login */,
+				CE300F00268A2A6500A79FEC /* register */,
+				CE300EBB2686129600A79FEC /* SceneDelegate.swift */,
+				CE300EB92686129600A79FEC /* AppDelegate.swift */,
+				CE300EBF2686129600A79FEC /* Main.storyboard */,
+				CE300EC22686129A00A79FEC /* Assets.xcassets */,
+				CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */,
+				CE300F0D268B344700A79FEC /* GoogleService-Info.plist */,
+				CE300EC72686129A00A79FEC /* Info.plist */,
+			);
+			path = telegram;
+			sourceTree = "<group>";
+		};
+		CE300ECF2686129B00A79FEC /* telegramTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE300ED02686129B00A79FEC /* telegramTests.swift */,
+				CE300ED22686129B00A79FEC /* Info.plist */,
+			);
+			path = telegramTests;
+			sourceTree = "<group>";
+		};
+		CE300EDA2686129B00A79FEC /* telegramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EDB2686129B00A79FEC /* telegramUITests.swift */,
+				CE300EDD2686129B00A79FEC /* Info.plist */,
+			);
+			path = telegramUITests;
+			sourceTree = "<group>";
+		};
+		CE300EF02686189000A79FEC /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EBD2686129600A79FEC /* ChatController.swift */,
+				CE300EEA2686140B00A79FEC /* ChatViewModel.swift */,
+				CE300EEC2686163700A79FEC /* ChatModel.swift */,
+				CE300EF426861C7000A79FEC /* ChatCell.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		CE300EF126861C2600A79FEC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE300F19268B68DC00A79FEC /* Constraints.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CE300EF6268622E100A79FEC /* dialog */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EF72686231400A79FEC /* DialogController.swift */,
+				CE300EF92686235300A79FEC /* DialogViewModel.swift */,
+			);
+			path = dialog;
+			sourceTree = "<group>";
+		};
+		CE300EFB26862A6900A79FEC /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EFC26862A8400A79FEC /* SplashViewCotroller.swift */,
+				CE300F1B268B698200A79FEC /* SplashViewModel.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		CE300EFF268A2A3C00A79FEC /* login */ = {
+			isa = PBXGroup;
+			children = (
+				CE300F05268A3C9A00A79FEC /* LoginController.swift */,
+				CE300F07268A3CB300A79FEC /* LoginViewModel.swift */,
+				CE76E7CA268C868D0013FA20 /* LoginModel.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		CE300F00268A2A6500A79FEC /* register */ = {
+			isa = PBXGroup;
+			children = (
+				CE300F09268A3CC800A79FEC /* RegisterController.swift */,
+				CE300F0B268A3CE900A79FEC /* RegisterViewModel.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		CE300F0F268B634A00A79FEC /* base  */ = {
+			isa = PBXGroup;
+			children = (
+				CE300EF226861C4300A79FEC /* BaseCell.swift */,
+				CE300F10268B635F00A79FEC /* BaseViewModel.swift */,
+			);
+			path = "base ";
+			sourceTree = "<group>";
+		};
+		CE300F12268B636600A79FEC /* di */ = {
+			isa = PBXGroup;
+			children = (
+				CE300F13268B637700A79FEC /* Repository.swift */,
+				CE300F17268B661000A79FEC /* ApiClient.swift */,
+			);
+			path = di;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE300EB52686129500A79FEC /* telegram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE300EE02686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegram" */;
+			buildPhases = (
+				DDE2D1959FA0A14380937CDB /* [CP] Check Pods Manifest.lock */,
+				CE300EB22686129500A79FEC /* Sources */,
+				CE300EB32686129500A79FEC /* Frameworks */,
+				CE300EB42686129500A79FEC /* Resources */,
+				EE428BC90C40E15DB81CD748 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = telegram;
+			productName = telegram;
+			productReference = CE300EB62686129600A79FEC /* telegram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE300ECB2686129B00A79FEC /* telegramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE300EE32686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegramTests" */;
+			buildPhases = (
+				6B83936B91683AE4EC8BE312 /* [CP] Check Pods Manifest.lock */,
+				CE300EC82686129B00A79FEC /* Sources */,
+				CE300EC92686129B00A79FEC /* Frameworks */,
+				CE300ECA2686129B00A79FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE300ECE2686129B00A79FEC /* PBXTargetDependency */,
+			);
+			name = telegramTests;
+			productName = telegramTests;
+			productReference = CE300ECC2686129B00A79FEC /* telegramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE300ED62686129B00A79FEC /* telegramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE300EE62686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegramUITests" */;
+			buildPhases = (
+				F8D17684E2FB53EB5F3776DB /* [CP] Check Pods Manifest.lock */,
+				CE300ED32686129B00A79FEC /* Sources */,
+				CE300ED42686129B00A79FEC /* Frameworks */,
+				CE300ED52686129B00A79FEC /* Resources */,
+				573F4B4E2D14EC5A5BE4D94B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE300ED92686129B00A79FEC /* PBXTargetDependency */,
+			);
+			name = telegramUITests;
+			productName = telegramUITests;
+			productReference = CE300ED72686129B00A79FEC /* telegramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE300EAE2686129500A79FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CE300EB52686129500A79FEC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CE300ECB2686129B00A79FEC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CE300EB52686129500A79FEC;
+					};
+					CE300ED62686129B00A79FEC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CE300EB52686129500A79FEC;
+					};
+				};
+			};
+			buildConfigurationList = CE300EB12686129500A79FEC /* Build configuration list for PBXProject "telegram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE300EAD2686129500A79FEC;
+			productRefGroup = CE300EB72686129600A79FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE300EB52686129500A79FEC /* telegram */,
+				CE300ECB2686129B00A79FEC /* telegramTests */,
+				CE300ED62686129B00A79FEC /* telegramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE300EB42686129500A79FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE300EC62686129A00A79FEC /* LaunchScreen.storyboard in Resources */,
+				CE300F0E268B344700A79FEC /* GoogleService-Info.plist in Resources */,
+				CE300EC32686129A00A79FEC /* Assets.xcassets in Resources */,
+				CE300EC12686129600A79FEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300ECA2686129B00A79FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300ED52686129B00A79FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		573F4B4E2D14EC5A5BE4D94B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegram-telegramUITests/Pods-telegram-telegramUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegram-telegramUITests/Pods-telegram-telegramUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-telegram-telegramUITests/Pods-telegram-telegramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B83936B91683AE4EC8BE312 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-telegramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDE2D1959FA0A14380937CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-telegram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE428BC90C40E15DB81CD748 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegram/Pods-telegram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-telegram/Pods-telegram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-telegram/Pods-telegram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8D17684E2FB53EB5F3776DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-telegram-telegramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE300EB22686129500A79FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE300EFD26862A8400A79FEC /* SplashViewCotroller.swift in Sources */,
+				CE300F1C268B698200A79FEC /* SplashViewModel.swift in Sources */,
+				CE300EED2686163700A79FEC /* ChatModel.swift in Sources */,
+				CE300EBE2686129600A79FEC /* ChatController.swift in Sources */,
+				CE300F06268A3C9A00A79FEC /* LoginController.swift in Sources */,
+				CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */,
+				CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */,
+				CE300F18268B661000A79FEC /* ApiClient.swift in Sources */,
+				CE300EBA2686129600A79FEC /* AppDelegate.swift in Sources */,
+				CE300F08268A3CB300A79FEC /* LoginViewModel.swift in Sources */,
+				CE300EBC2686129600A79FEC /* SceneDelegate.swift in Sources */,
+				CE300EF526861C7000A79FEC /* ChatCell.swift in Sources */,
+				CE300EF82686231400A79FEC /* DialogController.swift in Sources */,
+				CE300F0C268A3CE900A79FEC /* RegisterViewModel.swift in Sources */,
+				CE300F0A268A3CC800A79FEC /* RegisterController.swift in Sources */,
+				CE300F14268B637700A79FEC /* Repository.swift in Sources */,
+				CE300F11268B635F00A79FEC /* BaseViewModel.swift in Sources */,
+				CE300EFA2686235300A79FEC /* DialogViewModel.swift in Sources */,
+				CE300EF326861C4300A79FEC /* BaseCell.swift in Sources */,
+				CE300EEB2686140B00A79FEC /* ChatViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300EC82686129B00A79FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE300ED12686129B00A79FEC /* telegramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE300ED32686129B00A79FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE300EDC2686129B00A79FEC /* telegramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE300ECE2686129B00A79FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE300EB52686129500A79FEC /* telegram */;
+			targetProxy = CE300ECD2686129B00A79FEC /* PBXContainerItemProxy */;
+		};
+		CE300ED92686129B00A79FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE300EB52686129500A79FEC /* telegram */;
+			targetProxy = CE300ED82686129B00A79FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE300EBF2686129600A79FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE300EC02686129600A79FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE300EC52686129A00A79FEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE300EDE2686129B00A79FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE300EDF2686129B00A79FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE300EE12686129B00A79FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7892B960F16155C8BF77F1FD /* Pods-telegram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE300EE22686129B00A79FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DCAEBA75E0A9006F7C4B06 /* Pods-telegram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE300EE42686129B00A79FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE26B83B0A002AEDE7528382 /* Pods-telegramTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegramTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/telegram.app/telegram";
+			};
+			name = Debug;
+		};
+		CE300EE52686129B00A79FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31BE45AD4A07206E88D6C266 /* Pods-telegramTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegramTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/telegram.app/telegram";
+			};
+			name = Release;
+		};
+		CE300EE72686129B00A79FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80E0BC9FDA3A841DB2C3A736 /* Pods-telegram-telegramUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = telegram;
+			};
+			name = Debug;
+		};
+		CE300EE82686129B00A79FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2403291962BCB1278FDE19DF /* Pods-telegram-telegramUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = telegramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zalkar.telegramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = telegram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE300EB12686129500A79FEC /* Build configuration list for PBXProject "telegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE300EDE2686129B00A79FEC /* Debug */,
+				CE300EDF2686129B00A79FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE300EE02686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE300EE12686129B00A79FEC /* Debug */,
+				CE300EE22686129B00A79FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE300EE32686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE300EE42686129B00A79FEC /* Debug */,
+				CE300EE52686129B00A79FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE300EE62686129B00A79FEC /* Build configuration list for PBXNativeTarget "telegramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE300EE72686129B00A79FEC /* Debug */,
+				CE300EE82686129B00A79FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE300EAE2686129500A79FEC /* Project object */;
+}

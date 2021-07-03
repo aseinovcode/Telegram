@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>738078109198-5658gd44j5nigsk85v95k45qlms6uar6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.738078109198-5658gd44j5nigsk85v95k45qlms6uar6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCjMxSIw83IwvsST_qK9ZW9xQ-WNxiEcxA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>738078109198</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>zalkar.telegram</string>
+	<key>PROJECT_ID</key>
+	<string>telegram-72e20</string>
+	<key>STORAGE_BUCKET</key>
+	<string>telegram-72e20.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:738078109198:ios:b5acb1c80658a94c11565f</string>
+</dict>
+</plist>

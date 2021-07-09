@@ -6,23 +6,21 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class Repository {
     
     private static let shared = Repository()
     
-    private let userDefaults = UserDefaults.standard  //?????????????
+    // private let userDefaults = UserDefaults.standard
     
-    static func newInstanse() -> Repository {  //????????????
+    static func newInstanse() -> Repository {
         return shared
     }
     
-    var userToken: String? {  //?????????????
+    var user: User? {
         get {
-            return userDefaults.string(forKey: Constraints.Key.token)
-        }
-        set(token) {
-            userDefaults.set(token, forKey: Constraints.Key.token)
+            return FirebaseAuth.Auth.auth().currentUser
         }
     }
 }

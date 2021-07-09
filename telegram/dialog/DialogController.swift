@@ -33,6 +33,7 @@ class DialogViewController: UIViewController {
         view.separatorStyle = .none
         view.re.dataSource = self
         view.register(MyMessageCell.self, forCellReuseIdentifier: "MyMessageCell")
+        view.register(OtherMessageCell.self, forCellReuseIdentifier: "OtherMessageCell")
         view.re.delegate = self
         return view
     }()
@@ -71,7 +72,7 @@ class DialogViewController: UIViewController {
         
         view.addSubview(messageView)
         messageView.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview()
             make.left.right.equalToSuperview()
             make.height.equalTo(50)
         }
@@ -94,8 +95,8 @@ class DialogViewController: UIViewController {
         
         view.addSubview(messageTableView)
         messageTableView.snp.makeConstraints { (make) in
-            make.top.left.right.equalToSuperview()
-            make.bottom.equalTo(messageView.snp.top)
+            make.bottom.left.right.equalToSuperview()
+            make.top.equalTo(messageView.snp.top)
         }
     }
     
@@ -110,6 +111,9 @@ class DialogViewController: UIViewController {
 }
 
 extension DialogViewController: DialogDelegate {
+    func showAllMessage() {
+        self.messageTableView.reloadData()
+    }
     
     func showChat() {
         
@@ -118,26 +122,30 @@ extension DialogViewController: DialogDelegate {
     func fillData(chat: ChatModel?) {
         self.title = chat?.name
     }
-    
-    
 }
 
 
 extension DialogViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.message.count
+        return self.viewModel.allMessage.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let messageCell = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell") as! MyMessageCell
-        messageCell.fill(message: self.message[indexPath.row])
-        return messageCell
+        let message = self.viewModel.allMessage[indexPath.row]
+        
+        if message.typeMessage == .OtherMessage {
+            let messageCell = tableView.dequeueReusableCell(withIdentifier: "OtherMessageCell") as! OtherMessageCell
+            messageCell.fill(message: message.message)
+            return messageCell
+        } else {
+            let messageCell = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell") as! MyMessageCell
+            messageCell.fill(message: message.message)
+            return messageCell
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("scrollView.contentOffset.y =", scrollView.contentOffset.y)
     }
-    
-    
 }

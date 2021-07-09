@@ -19,6 +19,7 @@ class OtherMessageCell: BaseCell {
     
     private var messageLable: UILabel = {
         let view = UILabel()
+        view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         view.textColor = .white
         return view
     }()
@@ -28,6 +29,12 @@ class OtherMessageCell: BaseCell {
         contentMessageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(50)
             make.bottom.top.right.equalToSuperview()
+        }
+        
+        contentMessageView.addSubview(messageLable)
+        messageLable.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-20)
+            make.centerY.equalToSuperview()
         }
     }
     

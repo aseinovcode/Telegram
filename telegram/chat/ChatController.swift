@@ -40,8 +40,6 @@ class ChatController: UIViewController {
         return view
     }()
     
-    private var chats: [ChatModel] = []    //?????????????/
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -76,11 +74,11 @@ class ChatController: UIViewController {
 extension ChatController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DialogViewController.newInstanse(chat: self.chats[indexPath.row]), animated: true)
+        navigationController?.pushViewController(DialogViewController.newInstanse(chat: self.viewModel.chats[indexPath.row]), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.chats.count
+        return self.viewModel.chats.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -88,7 +86,7 @@ extension ChatController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let chat = self.chats[indexPath.row]
+        let chat = self.viewModel.chats[indexPath.row]
         let cell = ChatCell()
         
         cell.fill(chat: chat)   //??????????/
@@ -98,14 +96,12 @@ extension ChatController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ChatController: ChatDelegate {
-    func showAuth() {
-        navigationController?.pushViewController(LoginController(), animated: true)
+    func showUpdateChat() {
+        self.chatTableView.reloadData()
     }
     
-    func showChat(chats: [ChatModel]) {
-        self.chats = chats
-        
-        self.chatTableView.reloadData()
+    func showAuth() {
+        navigationController?.pushViewController(LoginController(), animated: true)
     }
 }
 

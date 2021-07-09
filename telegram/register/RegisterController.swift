@@ -15,7 +15,7 @@ class RegisterController: UIViewController {
         return RegisterViewModel(delegate: self)
     }()
     
-    private let imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .gray
@@ -24,8 +24,9 @@ class RegisterController: UIViewController {
         imageView.layer.borderWidth = 2
         imageView.layer.borderColor = UIColor.lightGray.cgColor
         imageView.layer.cornerRadius = 50
-        imageView.addGestureRecognizer(UIGestureRecognizer(target: self,
-                                                           action: #selector(didTapChangeProfilePic)))
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(didTapChangeProfilePic(sender:)))
+        imageView.addGestureRecognizer(tapGR)
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -178,9 +179,11 @@ class RegisterController: UIViewController {
         viewModel.register(password: passwordField.text ?? String(), email: emailField.text ?? String(), lastName: String(), fertsName: String())
     }
     
-    @objc private func didTapChangeProfilePic() {
-//        presentPhotoActionSheet()
-        print("tapped")
+    @objc private func didTapChangeProfilePic(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            presentPhotoActionSheet()
+            print("tapped")
+        }
     }
     
     func registerErrorAlert() {

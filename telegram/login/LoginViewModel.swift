@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 protocol LoginDelegate: AnyObject {
     func loginSucces()
@@ -22,7 +21,7 @@ class LoginViewModel: BaseViewModel {
     }
     
     func login(password: String, email: String) {
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [self] authResult, error in
+        apiClient.login(password: password, email: email, completion: { [self] authResult, error in
             if authResult == nil && error != nil {
                 delegate?.loginError()
             } else {

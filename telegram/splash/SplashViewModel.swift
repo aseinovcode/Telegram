@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 protocol SplashDelegate: AnyObject {
     func showMain()
@@ -22,7 +21,7 @@ class SplashViewModel: BaseViewModel {
     }
     
     func checkUser(){
-        if FirebaseAuth.Auth.auth().currentUser != nil {
+        if repository.user != nil {
             delegate?.showMain()
         } else {
             delegate?.showAuth()

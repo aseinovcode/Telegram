@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 
 protocol ChatDelegate: AnyObject {
-    func showChat(chats: [ChatModel])
+    func showUpdateChat()
     func showAuth()
 }
 
@@ -17,7 +17,7 @@ class ChatViewModel: BaseViewModel {
     
     private weak var delegate: ChatDelegate?
     
-    private var chats: [ChatModel] = []   //?????????????/
+    var chats: [ChatModel] = []
     
     init(delegate: ChatDelegate) {
         self.delegate = delegate
@@ -25,7 +25,7 @@ class ChatViewModel: BaseViewModel {
     
     func logout() {
         do {
-            try FirebaseAuth.Auth.auth().signOut()
+            try apiClient.logout()
             
             self.delegate?.showAuth()
         } catch {
@@ -37,6 +37,6 @@ class ChatViewModel: BaseViewModel {
         chats.append(ChatModel(name: "Eldar", lastMessage: "Ты где?", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))
         chats.append(ChatModel(name: "Talgat", lastMessage: "im ios delelopet", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))
         
-        delegate?.showChat(chats: chats)
+        delegate?.showUpdateChat()
     }
 }

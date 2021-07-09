@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Constraints {
+class Constraints {   //???????????/
     class Key {
         static let token: String = "userToken"
     }

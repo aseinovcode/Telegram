@@ -28,19 +28,19 @@ class ChatController: UIViewController {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
-        view.separatorStyle = UITableViewCell.SeparatorStyle.none
+        view.separatorStyle = .none
         return view
     }()
     
-//    private lazy var logoutButton: UIButton = {
-//        let view = UIButton()
-//        view.backgroundColor = .black
-//        view.setTitle("Logout", for: .normal)
-//        view.addTarget(self, action: #selector(clickLogOut(view:)), for: .touchUpInside)
-//        return view
-//    }()
+    private lazy var logoutButton: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .black
+        view.setTitle("Logout", for: .normal)
+        view.addTarget(self, action: #selector(clickLogOut(view:)), for: .touchUpInside)
+        return view
+    }()
     
-    private var chats: [ChatModel] = []
+    private var chats: [ChatModel] = []    //?????????????/
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,18 +65,18 @@ class ChatController: UIViewController {
             make.left.right.bottom.top.equalToSuperview()
         }
         
-//        view.addSubview(logoutButton)
-//        logoutButton.snp.makeConstraints { (make) in
-//            make.center.equalToSuperview()
-//            make.width.height.equalTo(100)
-//        }
+        view.addSubview(logoutButton)
+        logoutButton.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
     }
 }
 
 extension ChatController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DialogController.newInstanse(chat: self.chats[indexPath.row]), animated: true)
+        navigationController?.pushViewController(DialogViewController.newInstanse(chat: self.chats[indexPath.row]), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,7 +91,7 @@ extension ChatController: UITableViewDelegate, UITableViewDataSource {
         let chat = self.chats[indexPath.row]
         let cell = ChatCell()
         
-        cell.fill(chat: chat)
+        cell.fill(chat: chat)   //??????????/
         
         return cell
     }

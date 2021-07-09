@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DialogDelegate: AnyObject {
-    func showData()
+    func showChat()
     func fillData(chat: ChatModel?)
 }
 
@@ -22,9 +22,12 @@ class DialogViewModel: BaseViewModel {
         self.delegate = delegate
     }
     
-    func fill(chat: ChatModel) {
+    func fill(chat: ChatModel){
         self.chat = chat
         
         delegate?.fillData(chat: chat)
     }
+
+
+
 }

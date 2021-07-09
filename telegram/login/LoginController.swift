@@ -134,6 +134,17 @@ class LoginController: UIViewController {
         let vc = RegisterController()
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func loginErrorAlert(message: String = "Please enter all informtion to log in") {
+        let alert = UIAlertController(title: "Woops",
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss",
+                                      style: .cancel,
+                                      handler: nil))
+        
+        present(alert, animated: true)
+    }
 }
 
 extension LoginController: LoginDelegate {
@@ -141,8 +152,8 @@ extension LoginController: LoginDelegate {
         navigationController?.pushViewController(ChatController(), animated: true)
     }
     
-    func loginError(message: String) {
-        print(message)
+    func loginError() {
+        return loginErrorAlert()
     }
 }
 

@@ -5,18 +5,21 @@
 //  Created by User on 25/6/21.
 //
 
+import Foundation
 import UIKit
+import SnapKit
+import ReverseExtension
 
-class DialogController: UIViewController {
-    
-    static func newInstanse(chat: ChatModel) -> DialogController {
-        let viewController = DialogController()
-        viewController.viewModel.fill(chat: chat)
-        return viewController
+class DialogViewController: UIViewController {
+
+    static func newInstanse(chat: ChatModel) -> DialogViewController{
+        let viewcontroller = DialogViewController()
+        viewcontroller.viewModel.fill(chat: chat)
+        return viewcontroller
     }
     
     private lazy var viewModel: DialogViewModel = {
-        return DialogViewModel(delegate: self)
+        return DialogViewModel(delegate: self )
     }()
     
     private lazy var messageView: UIView = {
@@ -25,30 +28,33 @@ class DialogController: UIViewController {
         return view
     }()
     
+    private lazy var messageTableView: UITableView = {
+        let view = UITableView()
+        view.separatorStyle = .none
+        view.re.dataSource = self
+        view.register(MyMessageCell.self, forCellReuseIdentifier: "MyMessageCell")
+        view.re.delegate = self
+        return view
+    }()
+    
     private lazy var enterMessage: UITextField = {
         let view = UITextField()
         view.backgroundColor = .white
-        view.placeholder = "message"
+        view.placeholder = "Aa"
         view.layer.cornerRadius = 8
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         view.leftView = paddingView
         view.leftViewMode = .always
         return view
+        
     }()
     
     private lazy var sendButton: UIButton = {
         let view = UIButton()
         view.backgroundColor = .lightGray
         view.setTitleColor(.blue, for: .normal)
-        view.setTitle("Send", for: .normal)
+        view.setImage(UIImage(named: "send-button"), for: .normal)
         view.addTarget(self, action: #selector(clickSendMessage(view:)), for: .touchUpInside)
-        return view
-    }()
-    
-    private lazy var messageTableView: UITableView = {
-        let view = UITableView()
-        view.delegate = self
-        view.dataSource = self
         return view
     }()
     
@@ -65,7 +71,7 @@ class DialogController: UIViewController {
         
         view.addSubview(messageView)
         messageView.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-20)
             make.left.right.equalToSuperview()
             make.height.equalTo(50)
         }
@@ -93,6 +99,7 @@ class DialogController: UIViewController {
         }
     }
     
+    
     @objc func clickSendMessage(view: UIButton) {
         let messageSend = enterMessage.text ?? String()
         enterMessage.text = String()
@@ -102,24 +109,35 @@ class DialogController: UIViewController {
     }
 }
 
-extension DialogController: UITableViewDelegate, UITableViewDataSource {
+extension DialogViewController: DialogDelegate {
+    
+    func showChat() {
+        
+    }
+    
+    func fillData(chat: ChatModel?) {
+        self.title = chat?.name
+    }
+    
+    
+}
+
+
+extension DialogViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.message.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let messageCell = UITableViewCell()
-        messageCell.textLabel?.text = self.message[indexPath.row]
+        let messageCell = tableView.dequeueReusableCell(withIdentifier: "MyMessageCell") as! MyMessageCell
+        messageCell.fill(message: self.message[indexPath.row])
         return messageCell
     }
-}
-
-extension DialogController: DialogDelegate {
-    func fillData(chat: ChatModel?) {
-        self.title = chat?.name
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scrollView.contentOffset.y =", scrollView.contentOffset.y)
     }
     
-    func showData() {
-        
-    }
+    
 }

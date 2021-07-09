@@ -17,7 +17,7 @@ class ChatViewModel: BaseViewModel {
     
     private weak var delegate: ChatDelegate?
     
-    private var chats: [ChatModel] = []
+    private var chats: [ChatModel] = []   //?????????????/
     
     init(delegate: ChatDelegate) {
         self.delegate = delegate

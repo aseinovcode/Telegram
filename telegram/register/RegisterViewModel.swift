@@ -10,7 +10,7 @@ import FirebaseAuth
 
 protocol RegisterDelegate: AnyObject {
     func registerSucces()
-    func registerError(message: String)
+    func registerError()
 }
 
 class RegisterViewModel: BaseViewModel {
@@ -22,13 +22,12 @@ class RegisterViewModel: BaseViewModel {
     }
     
     func register(password: String, email: String, lastName: String, fertsName: String) {
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult, error in
-            guard let result = authResult , error == nil else {
-                self.delegate?.registerError(message: "error creating user")
-                return
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [self] authResult, error in
+            if authResult == nil && error != nil{
+                delegate?.registerError()
+            } else {
+                self.delegate?.registerSucces()
             }
-            
-            self.delegate?.registerSucces()
         })
     }
 }

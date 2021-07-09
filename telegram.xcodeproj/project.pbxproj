@@ -35,6 +35,9 @@
 		CE300F18268B661000A79FEC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F17268B661000A79FEC /* ApiClient.swift */; };
 		CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F19268B68DC00A79FEC /* Constraints.swift */; };
 		CE300F1C268B698200A79FEC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300F1B268B698200A79FEC /* SplashViewModel.swift */; };
+		CE54E93A26986D680046A257 /* MyMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54E93926986D680046A257 /* MyMessageCell.swift */; };
+		CE54E93C26986D7F0046A257 /* OtherMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54E93B26986D7F0046A257 /* OtherMessageCell.swift */; };
+		CE5BE23C2693DD0F00BF4491 /* вопросы.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BE23B2693DD0F00BF4491 /* вопросы.swift */; };
 		CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76E7CA268C868D0013FA20 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,9 @@
 		CE300F17268B661000A79FEC /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		CE300F19268B68DC00A79FEC /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		CE300F1B268B698200A79FEC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		CE54E93926986D680046A257 /* MyMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMessageCell.swift; sourceTree = "<group>"; };
+		CE54E93B26986D7F0046A257 /* OtherMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherMessageCell.swift; sourceTree = "<group>"; };
+		CE5BE23B2693DD0F00BF4491 /* вопросы.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "вопросы.swift"; sourceTree = "<group>"; };
 		CE76E7CA268C868D0013FA20 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +191,7 @@
 				CE300F00268A2A6500A79FEC /* register */,
 				CE300EBB2686129600A79FEC /* SceneDelegate.swift */,
 				CE300EB92686129600A79FEC /* AppDelegate.swift */,
+				CE5BE23B2693DD0F00BF4491 /* вопросы.swift */,
 				CE300EBF2686129600A79FEC /* Main.storyboard */,
 				CE300EC22686129A00A79FEC /* Assets.xcassets */,
 				CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */,
@@ -236,6 +243,8 @@
 			children = (
 				CE300EF72686231400A79FEC /* DialogController.swift */,
 				CE300EF92686235300A79FEC /* DialogViewModel.swift */,
+				CE54E93926986D680046A257 /* MyMessageCell.swift */,
+				CE54E93B26986D7F0046A257 /* OtherMessageCell.swift */,
 			);
 			path = dialog;
 			sourceTree = "<group>";
@@ -534,6 +543,7 @@
 				CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */,
 				CE300F18268B661000A79FEC /* ApiClient.swift in Sources */,
 				CE300EBA2686129600A79FEC /* AppDelegate.swift in Sources */,
+				CE54E93C26986D7F0046A257 /* OtherMessageCell.swift in Sources */,
 				CE300F08268A3CB300A79FEC /* LoginViewModel.swift in Sources */,
 				CE300EBC2686129600A79FEC /* SceneDelegate.swift in Sources */,
 				CE300EF526861C7000A79FEC /* ChatCell.swift in Sources */,
@@ -544,7 +554,9 @@
 				CE300F11268B635F00A79FEC /* BaseViewModel.swift in Sources */,
 				CE300EFA2686235300A79FEC /* DialogViewModel.swift in Sources */,
 				CE300EF326861C4300A79FEC /* BaseCell.swift in Sources */,
+				CE5BE23C2693DD0F00BF4491 /* вопросы.swift in Sources */,
 				CE300EEB2686140B00A79FEC /* ChatViewModel.swift in Sources */,
+				CE54E93A26986D680046A257 /* MyMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

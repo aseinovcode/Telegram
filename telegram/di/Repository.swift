@@ -11,13 +11,13 @@ class Repository {
     
     private static let shared = Repository()
     
-    private let userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.standard  //?????????????
     
-    static func newInstanse() -> Repository {
+    static func newInstanse() -> Repository {  //????????????
         return shared
     }
     
-    var userToken: String? {
+    var userToken: String? {  //?????????????
         get {
             return userDefaults.string(forKey: Constraints.Key.token)
         }

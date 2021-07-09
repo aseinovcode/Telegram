@@ -10,7 +10,7 @@ import FirebaseAuth
 
 protocol LoginDelegate: AnyObject {
     func loginSucces()
-    func loginError(message: String)
+    func loginError()
 }
 
 class LoginViewModel: BaseViewModel {
@@ -23,12 +23,12 @@ class LoginViewModel: BaseViewModel {
     
     func login(password: String, email: String) {
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [self] authResult, error in
-            guard let result = authResult, error == nil else {
-                delegate?.loginError(message: "failed to login user with email:\(email)")
-                return
+            if authResult == nil && error != nil {
+                delegate?.loginError()
+            } else {
+                delegate?.loginSucces()
             }
-
-            delegate?.loginSucces()
         })
     }
 }
+

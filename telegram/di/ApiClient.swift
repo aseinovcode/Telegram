@@ -11,7 +11,7 @@ class ApiClient {
     
     private static let shared = ApiClient()
     
-    static func newInstanse() -> ApiClient {
+    static func newInstanse() -> ApiClient {  //?????????/
         return shared
     }
 }

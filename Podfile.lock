@@ -104,6 +104,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (1.2.12)
+  - ReverseExtension (0.6.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -111,6 +112,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Kingfisher (~> 6.0)
+  - ReverseExtension
   - SnapKit
 
 SPEC REPOS:
@@ -130,6 +132,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - ReverseExtension
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -148,8 +151,9 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  ReverseExtension: 5c7ca8c165f47e9bde8e26084d5e7bf21ad4f5a6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: c6c97817f6be99cf6ac5c594c6f03d0d01ff596d
+PODFILE CHECKSUM: 2e4e1297befb81bcb8addcffd393673a333ea5c8
 
 COCOAPODS: 1.10.1

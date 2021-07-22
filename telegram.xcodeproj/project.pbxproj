@@ -13,7 +13,6 @@
 		CE300EBA2686129600A79FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EB92686129600A79FEC /* AppDelegate.swift */; };
 		CE300EBC2686129600A79FEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EBB2686129600A79FEC /* SceneDelegate.swift */; };
 		CE300EBE2686129600A79FEC /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300EBD2686129600A79FEC /* ChatController.swift */; };
-		CE300EC12686129600A79FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE300EBF2686129600A79FEC /* Main.storyboard */; };
 		CE300EC32686129A00A79FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE300EC22686129A00A79FEC /* Assets.xcassets */; };
 		CE300EC62686129A00A79FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */; };
 		CE300ED12686129B00A79FEC /* telegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE300ED02686129B00A79FEC /* telegramTests.swift */; };
@@ -40,6 +39,16 @@
 		CE54E93E269898A00046A257 /* DialogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54E93D269898A00046A257 /* DialogMessage.swift */; };
 		CE5BE23C2693DD0F00BF4491 /* вопросы.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BE23B2693DD0F00BF4491 /* вопросы.swift */; };
 		CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76E7CA268C868D0013FA20 /* LoginModel.swift */; };
+		CE7B90F226A9F71500A49BEA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90F126A9F71500A49BEA /* DatabaseManager.swift */; };
+		CE7B90F426A9F79800A49BEA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90F326A9F79800A49BEA /* StorageManager.swift */; };
+		CE7B90F826A9FA8600A49BEA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90F726A9FA8600A49BEA /* TabBarViewController.swift */; };
+		CE7B90FB26A9FAD300A49BEA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90FA26A9FAD300A49BEA /* ProfileViewController.swift */; };
+		CE7B90FD26A9FAF200A49BEA /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90FC26A9FAF200A49BEA /* ProfileViewModel.swift */; };
+		CE7B90FF26A9FB0800A49BEA /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B90FE26A9FB0800A49BEA /* ProfileCell.swift */; };
+		CE7B910326A9FB5C00A49BEA /* NewDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910226A9FB5C00A49BEA /* NewDialogViewController.swift */; };
+		CE7B910526A9FBC500A49BEA /* NewDialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910426A9FBC500A49BEA /* NewDialogViewModel.swift */; };
+		CE7B910726A9FBDF00A49BEA /* NDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910626A9FBDF00A49BEA /* NDModel.swift */; };
+		CE7B910926A9FBF500A49BEA /* NDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910826A9FBF500A49BEA /* NDCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +82,6 @@
 		CE300EB92686129600A79FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE300EBB2686129600A79FEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE300EBD2686129600A79FEC /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
-		CE300EC02686129600A79FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE300EC22686129A00A79FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE300EC52686129A00A79FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE300EC72686129A00A79FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +113,16 @@
 		CE54E93D269898A00046A257 /* DialogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogMessage.swift; sourceTree = "<group>"; };
 		CE5BE23B2693DD0F00BF4491 /* вопросы.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "вопросы.swift"; sourceTree = "<group>"; };
 		CE76E7CA268C868D0013FA20 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		CE7B90F126A9F71500A49BEA /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CE7B90F326A9F79800A49BEA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CE7B90F726A9FA8600A49BEA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE7B90FA26A9FAD300A49BEA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CE7B90FC26A9FAF200A49BEA /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CE7B90FE26A9FB0800A49BEA /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		CE7B910226A9FB5C00A49BEA /* NewDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDialogViewController.swift; sourceTree = "<group>"; };
+		CE7B910426A9FBC500A49BEA /* NewDialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDialogViewModel.swift; sourceTree = "<group>"; };
+		CE7B910626A9FBDF00A49BEA /* NDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDModel.swift; sourceTree = "<group>"; };
+		CE7B910826A9FBF500A49BEA /* NDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,10 +209,12 @@
 				CE300EFB26862A6900A79FEC /* splash */,
 				CE300EFF268A2A3C00A79FEC /* login */,
 				CE300F00268A2A6500A79FEC /* register */,
+				CE7B90F926A9FAB200A49BEA /* profile */,
+				CE7B910126A9FB3700A49BEA /* newDialog */,
+				CE7B90F626A9FA6000A49BEA /* TabBar */,
 				CE300EBB2686129600A79FEC /* SceneDelegate.swift */,
 				CE300EB92686129600A79FEC /* AppDelegate.swift */,
 				CE5BE23B2693DD0F00BF4491 /* вопросы.swift */,
-				CE300EBF2686129600A79FEC /* Main.storyboard */,
 				CE300EC22686129A00A79FEC /* Assets.xcassets */,
 				CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */,
 				CE300F0D268B344700A79FEC /* GoogleService-Info.plist */,
@@ -236,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				CE300F19268B68DC00A79FEC /* Constraints.swift */,
+				CE7B90F126A9F71500A49BEA /* DatabaseManager.swift */,
+				CE7B90F326A9F79800A49BEA /* StorageManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -296,6 +318,35 @@
 				CE300F17268B661000A79FEC /* ApiClient.swift */,
 			);
 			path = di;
+			sourceTree = "<group>";
+		};
+		CE7B90F626A9FA6000A49BEA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B90F726A9FA8600A49BEA /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE7B90F926A9FAB200A49BEA /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B90FA26A9FAD300A49BEA /* ProfileViewController.swift */,
+				CE7B90FC26A9FAF200A49BEA /* ProfileViewModel.swift */,
+				CE7B90FE26A9FB0800A49BEA /* ProfileCell.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		CE7B910126A9FB3700A49BEA /* newDialog */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B910226A9FB5C00A49BEA /* NewDialogViewController.swift */,
+				CE7B910426A9FBC500A49BEA /* NewDialogViewModel.swift */,
+				CE7B910626A9FBDF00A49BEA /* NDModel.swift */,
+				CE7B910826A9FBF500A49BEA /* NDCell.swift */,
+			);
+			path = newDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,7 +460,6 @@
 				CE300EC62686129A00A79FEC /* LaunchScreen.storyboard in Resources */,
 				CE300F0E268B344700A79FEC /* GoogleService-Info.plist in Resources */,
 				CE300EC32686129A00A79FEC /* Assets.xcassets in Resources */,
-				CE300EC12686129600A79FEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,10 +590,14 @@
 				CE300EFD26862A8400A79FEC /* SplashViewCotroller.swift in Sources */,
 				CE300F1C268B698200A79FEC /* SplashViewModel.swift in Sources */,
 				CE300EED2686163700A79FEC /* ChatModel.swift in Sources */,
+				CE7B910726A9FBDF00A49BEA /* NDModel.swift in Sources */,
 				CE300EBE2686129600A79FEC /* ChatController.swift in Sources */,
+				CE7B90F826A9FA8600A49BEA /* TabBarViewController.swift in Sources */,
 				CE300F06268A3C9A00A79FEC /* LoginController.swift in Sources */,
 				CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */,
 				CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */,
+				CE7B90F226A9F71500A49BEA /* DatabaseManager.swift in Sources */,
+				CE7B90FF26A9FB0800A49BEA /* ProfileCell.swift in Sources */,
 				CE300F18268B661000A79FEC /* ApiClient.swift in Sources */,
 				CE300EBA2686129600A79FEC /* AppDelegate.swift in Sources */,
 				CE54E93C26986D7F0046A257 /* OtherMessageCell.swift in Sources */,
@@ -553,14 +607,20 @@
 				CE300EF526861C7000A79FEC /* ChatCell.swift in Sources */,
 				CE300EF82686231400A79FEC /* DialogController.swift in Sources */,
 				CE300F0C268A3CE900A79FEC /* RegisterViewModel.swift in Sources */,
+				CE7B90FB26A9FAD300A49BEA /* ProfileViewController.swift in Sources */,
+				CE7B910326A9FB5C00A49BEA /* NewDialogViewController.swift in Sources */,
 				CE300F0A268A3CC800A79FEC /* RegisterController.swift in Sources */,
 				CE300F14268B637700A79FEC /* Repository.swift in Sources */,
 				CE300F11268B635F00A79FEC /* BaseViewModel.swift in Sources */,
 				CE300EFA2686235300A79FEC /* DialogViewModel.swift in Sources */,
+				CE7B910526A9FBC500A49BEA /* NewDialogViewModel.swift in Sources */,
 				CE300EF326861C4300A79FEC /* BaseCell.swift in Sources */,
 				CE5BE23C2693DD0F00BF4491 /* вопросы.swift in Sources */,
+				CE7B910926A9FBF500A49BEA /* NDCell.swift in Sources */,
 				CE300EEB2686140B00A79FEC /* ChatViewModel.swift in Sources */,
 				CE54E93A26986D680046A257 /* MyMessageCell.swift in Sources */,
+				CE7B90FD26A9FAF200A49BEA /* ProfileViewModel.swift in Sources */,
+				CE7B90F426A9F79800A49BEA /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,14 +656,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE300EBF2686129600A79FEC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE300EC02686129600A79FEC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE300EC42686129A00A79FEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

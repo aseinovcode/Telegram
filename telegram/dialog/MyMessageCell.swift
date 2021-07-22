@@ -14,6 +14,7 @@ class MyMessageCell: BaseCell {
     private var contentMessageView: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
+        view.layer.cornerRadius = 20
         return view
     }()
     

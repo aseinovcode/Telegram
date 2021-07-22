@@ -12,6 +12,8 @@ target 'telegram' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'ReverseExtension'
+  pod 'Firebase/Storage'
+  pod 'JGProgressHUD'
 
   target 'telegramTests' do
     inherit! :search_paths

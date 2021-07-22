@@ -10,6 +10,9 @@ PODS:
   - Firebase/Database (8.1.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (~> 8.1.0)
+  - Firebase/Storage (8.1.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 8.1.0)
   - FirebaseAnalytics (8.1.0):
     - FirebaseAnalytics/AdIdSupport (= 8.1.0)
     - FirebaseCore (~> 8.0)
@@ -59,6 +62,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (~> 1.2)
+  - FirebaseStorage (8.1.0):
+    - FirebaseCore (~> 8.0)
+    - GTMSessionFetcher/Core (~> 1.5)
   - GoogleAppMeasurement (8.1.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.1.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -96,6 +102,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.4.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - JGProgressHUD (2.2)
   - Kingfisher (6.3.0)
   - leveldb-library (1.22.1)
   - nanopb (2.30908.0):
@@ -111,6 +118,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
+  - JGProgressHUD
   - Kingfisher (~> 6.0)
   - ReverseExtension
   - SnapKit
@@ -124,10 +133,12 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseDatabase
     - FirebaseInstallations
+    - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - JGProgressHUD
     - Kingfisher
     - leveldb-library
     - nanopb
@@ -143,10 +154,12 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 3e249cee3de5c5f9cfd6cc2a19997231286fec11
   FirebaseDatabase: cc219dac8f37fe80f5838ed5ffd84ce3daa443ad
   FirebaseInstallations: 7f31798a8198c354eadcb87176d2090b62edc187
+  FirebaseStorage: 5b5958efaf84fb991568ad36f157f60c76bdcd80
   GoogleAppMeasurement: 9ff7b9e23cced93a5a41736c09bdeb5b5b7fb111
   GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
@@ -154,6 +167,6 @@ SPEC CHECKSUMS:
   ReverseExtension: 5c7ca8c165f47e9bde8e26084d5e7bf21ad4f5a6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 2e4e1297befb81bcb8addcffd393673a333ea5c8
+PODFILE CHECKSUM: 9342576fc6a563ae3c3aa878e1754c11a44897cd
 
 COCOAPODS: 1.10.1

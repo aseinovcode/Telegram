@@ -23,16 +23,6 @@ class ChatViewModel: BaseViewModel {
         self.delegate = delegate
     }
     
-    func logout() {
-        do {
-            try apiClient.logout()
-            
-            self.delegate?.showAuth()
-        } catch {
-            print("signOut error")
-        }
-    }
-    
     func loadChat() {
         chats.append(ChatModel(name: "Eldar", lastMessage: "Ты где?", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))
         chats.append(ChatModel(name: "Talgat", lastMessage: "im ios delelopet", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))

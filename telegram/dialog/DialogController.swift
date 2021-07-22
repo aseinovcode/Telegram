@@ -95,8 +95,8 @@ class DialogViewController: UIViewController {
         
         view.addSubview(messageTableView)
         messageTableView.snp.makeConstraints { (make) in
-            make.bottom.left.right.equalToSuperview()
-            make.top.equalTo(messageView.snp.top)
+            make.top.left.right.equalToSuperview()
+            make.bottom.equalTo(messageView.snp.top)
         }
     }
     
@@ -132,6 +132,7 @@ extension DialogViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let message = self.viewModel.allMessage[indexPath.row]
         
         if message.typeMessage == .OtherMessage {

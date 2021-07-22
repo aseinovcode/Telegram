@@ -46,7 +46,7 @@ class RegisterController: UIViewController {
         return field
     }()
     
-    private let FirstNameField: UITextField = {
+    private let firstNameField: UITextField = {
         let field = UITextField()
         field.autocapitalizationType = .none
         field.autocorrectionType = .no
@@ -120,7 +120,7 @@ class RegisterController: UIViewController {
     
     func setupRegUI() {
         view.addSubview(imageView)
-        view.addSubview(FirstNameField)
+        view.addSubview(firstNameField)
         view.addSubview(lastNameField)
         view.addSubview(emailField)
         view.addSubview(passwordField)
@@ -128,12 +128,12 @@ class RegisterController: UIViewController {
         
         imageView.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(FirstNameField.snp.top).offset(-15)
+            make.bottom.equalTo(firstNameField.snp.top).offset(-15)
             make.width.equalTo(view.frame.width / 3.0)
             make.height.equalTo(view.frame.width / 3.0)
         }
 
-        FirstNameField.snp.makeConstraints{ (make) in
+        firstNameField.snp.makeConstraints{ (make) in
             make.right.equalToSuperview().offset(-20)
             make.left.equalToSuperview().offset(20)
             make.bottom.equalTo(lastNameField.snp.top).offset(-10)
@@ -176,7 +176,26 @@ class RegisterController: UIViewController {
     }
     
     @objc private func registerButtonTapped(){
-        viewModel.register(password: passwordField.text ?? String(), email: emailField.text ?? String(), lastName: String(), fertsName: String())
+        
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
+        
+        viewModel.register(firstName: firstNameField.text ?? String(), lastName: lastNameField.text ?? String(), email: emailField.text ?? String(), password: passwordField.text ?? String())
+        
+        guard let firstName = firstNameField.text,
+              let lastName = lastNameField.text,
+              let email = emailField.text,
+              let password = passwordField.text,
+              !email.isEmpty,
+              !password.isEmpty,
+              !firstName.isEmpty,
+              !lastName.isEmpty,
+              password.count >= 6 else {
+            registerError()
+            return
+        }
     }
     
     @objc private func didTapChangeProfilePic(sender: UITapGestureRecognizer) {
@@ -196,15 +215,35 @@ class RegisterController: UIViewController {
         
         present(alert, animated: true)
     }
+    
+    func userExistsAlert() {
+        let alert = UIAlertController(title: "Woops",
+                                      message: "User account for this user email address is already exists",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss",
+                                      style: .cancel,
+                                      handler: nil))
+        
+        present(alert, animated: true)
+    }
 }
 
 extension RegisterController: RegisterDelegate {
-    func registerSucces() {
+    func registerSuccess() {
         navigationController?.pushViewController(ChatController(), animated: true)
     }
     
+    
+    func imageViewDel() -> UIImageView {
+        return imageView
+    }
+    
+    func UserExists() {
+        return userExistsAlert()
+    }
+    
     func registerError() {
-        return
+        return registerErrorAlert()
     }
 }
 

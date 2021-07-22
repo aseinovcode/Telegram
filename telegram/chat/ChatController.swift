@@ -32,43 +32,33 @@ class ChatController: UIViewController {
         return view
     }()
     
-    private lazy var logoutButton: UIButton = {
-        let view = UIButton()
-        view.backgroundColor = .black
-        view.setTitle("Logout", for: .normal)
-        view.addTarget(self, action: #selector(clickLogOut(view:)), for: .touchUpInside)
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
-        
         viewModel.loadChat()
-    }
-
-    @objc func clickLogOut(view: UIButton) {
-        viewModel.logout()
     }
     
     private func setupUI() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didTapComposeButton))
+        
         title = "Chats"
         view.backgroundColor = UIColor.white
-        
         navigationItem.hidesBackButton = true
         
         view.addSubview(chatTableView)
         chatTableView.snp.makeConstraints { (make) in
             make.left.right.bottom.top.equalToSuperview()
         }
-        
-        view.addSubview(logoutButton)
-        logoutButton.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.height.equalTo(100)
-        }
+
     }
+    @objc func didTapComposeButton() {
+        let vc = NewDialogViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
+    }
+
 }
 
 extension ChatController: UITableViewDelegate, UITableViewDataSource {

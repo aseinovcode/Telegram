@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 protocol NewDialogDelegate: AnyObject {
     func loadSucces()
@@ -28,7 +29,7 @@ class NewDialogViewModel: BaseViewModel {
     
     func searchUsers(query: String) {
         //check if array has firebase results
-        if hasFetched{
+        if hasFetched {
             //if it does: filter
             filterUsers(with: query)
         }else {
@@ -44,6 +45,25 @@ class NewDialogViewModel: BaseViewModel {
                 }
             })
         }
+    }
+    
+    func getAllUsers() {
+        DatabaseManager.shared.getAllUsers(copletion: {[weak self] result in
+            switch result {
+            case .success(let usersCollection):
+                try! self?.results = result.get()
+            
+                for (index, element) in self!.results.enumerated() {
+                    if element["id"]! == Auth.auth().currentUser!.uid {
+                        self?.results.remove(at: index)
+                    }
+                }
+                
+                self?.updateUI()
+            case  .failure(let error):
+                print("failed to load:\(error)")
+            }
+        })
     }
     
     func filterUsers(with term: String) {

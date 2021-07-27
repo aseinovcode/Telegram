@@ -42,7 +42,9 @@ class RegisterViewModel: BaseViewModel{
                 
                 let chatUser = ChatAppUser(firsName: firstName,
                                            lastName: lastName,
-                                           emailAddress: email)
+                                           emailAddress: email,
+                                           id: authResult!.user.uid)
+                
                 DatabaseManager.shared.insertUser(with: chatUser, completion: { success in
                     if success {
                         guard let image = delegate?.imageViewDel().image,
@@ -53,7 +55,7 @@ class RegisterViewModel: BaseViewModel{
                         StorageManager.shared.profilePicUpload(with: data, filename: filename, completion: {result in
                             switch result {
                             case .success(let downloadUrl):
-                                UserDefaults.standard.set(downloadUrl, forKey: "profile_pic_url")
+                                Repository.shared.userDefaults.set(downloadUrl, forKey: "profile_pic_url")
                                 print(downloadUrl)
                             case .failure(let error):
                                 print("storage manager error: \(error)")

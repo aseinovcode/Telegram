@@ -47,6 +47,9 @@ class NewDialogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spinner.show(in: view)
+        viewModel.getAllUsers()
+        
         setupUI()
     }
     
@@ -96,6 +99,18 @@ extension NewDialogViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         //start conversation
         let targetUserData = viewModel.results[indexPath.row]
+        
+        let targerUserDataModel = ChatAppUser(
+            firsName: targetUserData["name"]!,
+            lastName: targetUserData["last_name"]!,
+            emailAddress: targetUserData["email"]!,
+            id: targetUserData["id"]!,
+            historyChat: nil
+        )
+        
+        DatabaseManager.shared.startChats(with: targerUserDataModel, completion: { succes in
+            
+        })
     }
     
 }
@@ -118,16 +133,20 @@ extension NewDialogViewController: UISearchBarDelegate{
 extension NewDialogViewController: NewDialogDelegate {
     
     func loadError() {
-        self.noResultsLabel.isHidden = false
-        self.tableView.isHidden = true
-        self.spinner.dismiss()
+        DispatchQueue.main.async {
+            self.noResultsLabel.isHidden = false
+            self.tableView.isHidden = true
+            self.spinner.dismiss()
+        }
     }
 
     func loadSucces() {
-        self.noResultsLabel.isHidden = true
-        self.tableView.isHidden = false
-        self.spinner.dismiss()
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.noResultsLabel.isHidden = true
+            self.tableView.isHidden = false
+            self.spinner.dismiss()
+            self.tableView.reloadData()
+        }
     }
 }
 

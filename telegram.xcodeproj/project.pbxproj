@@ -49,6 +49,7 @@
 		CE7B910526A9FBC500A49BEA /* NewDialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910426A9FBC500A49BEA /* NewDialogViewModel.swift */; };
 		CE7B910726A9FBDF00A49BEA /* NDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910626A9FBDF00A49BEA /* NDModel.swift */; };
 		CE7B910926A9FBF500A49BEA /* NDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B910826A9FBF500A49BEA /* NDCell.swift */; };
+		CE8C7EB426AB0E0F00DD200D /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C7EB326AB0E0F00DD200D /* UIExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		CE7B910426A9FBC500A49BEA /* NewDialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDialogViewModel.swift; sourceTree = "<group>"; };
 		CE7B910626A9FBDF00A49BEA /* NDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDModel.swift; sourceTree = "<group>"; };
 		CE7B910826A9FBF500A49BEA /* NDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NDCell.swift; sourceTree = "<group>"; };
+		CE8C7EB326AB0E0F00DD200D /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				CE300F19268B68DC00A79FEC /* Constraints.swift */,
 				CE7B90F126A9F71500A49BEA /* DatabaseManager.swift */,
 				CE7B90F326A9F79800A49BEA /* StorageManager.swift */,
+				CE8C7EB326AB0E0F00DD200D /* UIExtensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				CE7B90F826A9FA8600A49BEA /* TabBarViewController.swift in Sources */,
 				CE300F06268A3C9A00A79FEC /* LoginController.swift in Sources */,
 				CE76E7CB268C868D0013FA20 /* LoginModel.swift in Sources */,
+				CE8C7EB426AB0E0F00DD200D /* UIExtensions.swift in Sources */,
 				CE300F1A268B68DC00A79FEC /* Constraints.swift in Sources */,
 				CE7B90F226A9F71500A49BEA /* DatabaseManager.swift in Sources */,
 				CE7B90FF26A9FB0800A49BEA /* ProfileCell.swift in Sources */,

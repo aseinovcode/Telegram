@@ -10,9 +10,9 @@ import FirebaseAuth
 
 class Repository {
     
-    private static let shared = Repository()
+    static let shared = Repository()
     
-    // private let userDefaults = UserDefaults.standard
+    public let userDefaults = UserDefaults.standard
     
     static func newInstanse() -> Repository {
         return shared

@@ -150,6 +150,7 @@ class LoginController: UIViewController {
 extension LoginController: LoginDelegate {
     func loginSucces() {
         navigationController?.pushViewController(ChatController(), animated: true)
+        Repository.shared.userDefaults.setValue(emailField, forKey: "email")
     }
     
     func loginError() {

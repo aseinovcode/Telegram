@@ -24,9 +24,25 @@ class ChatViewModel: BaseViewModel {
     }
     
     func loadChat() {
-        chats.append(ChatModel(name: "Eldar", lastMessage: "Ты где?", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))
-        chats.append(ChatModel(name: "Talgat", lastMessage: "im ios delelopet", urlImage: "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"))
-        
-        delegate?.showUpdateChat()
+        getAllUsers()
+    }
+    
+    private func getAllUsers() {
+        DatabaseManager.shared.getAllUsers(copletion: {[weak self] result in
+            switch result {
+            case .success(let usersCollection):
+                let results = try! result.get()
+            
+                results.forEach { (item) in
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    self?.delegate?.showUpdateChat()
+                }
+            case  .failure(let error):
+                print("failed to load:\(error)")
+            }
+        })
     }
 }

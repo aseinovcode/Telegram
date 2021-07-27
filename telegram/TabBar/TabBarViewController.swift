@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class TabBarViewController: UITabBarController {
     
@@ -22,7 +23,15 @@ class TabBarViewController: UITabBarController {
     
     func templateNavigationController(image: UIImage, rootViewController: UIViewController ) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
-        nav.tabBarItem.image = image
+        
+        var imageView = UIImageView()
+        imageView.snp.makeConstraints { (make) in
+            make.width.height.equalTo(20)
+        }
+        
+        nav.view.addSubview(imageView)
+        imageView.image = image
+        
         return nav
     }
     

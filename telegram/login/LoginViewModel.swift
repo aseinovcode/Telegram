@@ -26,6 +26,7 @@ class LoginViewModel: BaseViewModel {
                 delegate?.loginError()
             } else {
                 delegate?.loginSucces()
+                Repository.shared.userDefaults.set(email, forKey: "email")
             }
         })
     }
